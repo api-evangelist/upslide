@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.upslide.net/hc/en-us/articles/28448436240412-UpSlide-skills-for-Claude
+description: >-
+  UpSlide publishes provider-authored, downloadable Agent Skills for Claude
+  ("UpSlide skills for Claude", help center section published 2026-06,
+  alongside the UpSlide MCP server at https://api.upslide.com/mcp). The
+  download lives in the help center category below; the skill files themselves
+  are served behind a Cloudflare browser challenge and could not be harvested
+  by this pipeline (Zendesk API exposes the category/article but no
+  attachments), so no skill content is mirrored here — this index records the
+  verified provider surface only. No skills have been generated locally
+  because UpSlide publishes no OpenAPI to ground them in.
+provider_published: true
+skills: []
+downloads:
+  - name: UpSlide skills for Claude
+    url: https://support.upslide.net/hc/en-us/categories/28379860955932
+    article: https://support.upslide.net/hc/en-us/articles/28448436240412-UpSlide-skills-for-Claude
+    note: '"Click here to download and install our skills for Claude!" (article body, updated 2026-06-26)'
+related:
+  mcp: mcp/upslide-mcp.yml

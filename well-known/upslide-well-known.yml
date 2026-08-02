@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+description: >-
+  Probe of the /.well-known/ discovery surface across UpSlide's public hosts
+  (upslide.com website, upslide.net legacy/redirect domain, portal.upslide.net
+  customer portal, and the api.upslide.com / api.upslide.net service hosts).
+  No well-known documents are published; every probed path returned 404.
+  Recorded statuses are the honest result of the probe.
+hosts:
+  - host: https://upslide.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://www.upslide.net
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://portal.upslide.net
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+  - host: https://api.upslide.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+  - host: https://api.upslide.net
+    documents:
+      - path: /.well-known/security.txt
+        status: 404

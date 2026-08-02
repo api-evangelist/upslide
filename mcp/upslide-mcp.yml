@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://support.upslide.net/hc/en-us/articles/27913021443996-Connect-Claude-to-UpSlide
+description: >-
+  UpSlide operates an official remote MCP server at https://api.upslide.com/mcp
+  (Streamable HTTP) that connects AI assistants such as Claude Desktop and
+  Microsoft 365 Copilot to the UpSlide add-in for Excel, PowerPoint, Word and
+  Outlook. The connector maps the user's email (via Microsoft Entra ID admin
+  consent) to their UpSlide license. Tool execution is local: the MCP server
+  acts as a relay to the UpSlide desktop add-in over a persistent outbound
+  authenticated channel (HTTPS/TLS 1.2 to https://api.upslide.net/ai), with no
+  long-term persistence of business data and no direct file-system access by
+  the server. Selected UpSlide features (e.g. Excel link listing, AI Slide
+  Generator, consistency check) are exposed via MCP as of UpSlide V7.1.0
+  (2026-06-24); the provider does not publish a public tool-by-tool list.
+server:
+  name: upslide
+  transport: http
+  url: https://api.upslide.com/mcp
+  auth: microsoft-entra-id
+  notes: >-
+    Admin consent for the Entra ID connector application is required so the
+    connector can read the user's email and map it to an UpSlide license.
+docs:
+  - https://support.upslide.net/hc/en-us/articles/27412396550812-UpSlide-MCP
+  - https://support.upslide.net/hc/en-us/articles/27913021443996-Connect-Claude-to-UpSlide
+evidence:
+  - source: https://support.upslide.net/hc/en-us/articles/27913021443996-Connect-Claude-to-UpSlide
+    detail: 'Claude Desktop custom connector server URL: https://api.upslide.com/mcp'
+  - source: https://support.upslide.net/hc/en-us/articles/27412396550812-UpSlide-MCP
+    detail: 'MCP relay architecture; add-in channel to https://api.upslide.net/ai (HTTPS, TLS 1.2)'
+  - source: https://support.upslide.net/hc/en-us/articles/201973503-Release-notes
+    detail: 'V7.1.0 (24/06/2026): "MCP Server: User can now access selected UpSlide features via Claude PPT & Excel"'

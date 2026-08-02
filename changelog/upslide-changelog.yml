@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.upslide.net/hc/en-us/articles/201973503-Release-notes
+description: >-
+  Structured capture of UpSlide's dated release notes, published in the UpSlide
+  help center and updated with each release of the Microsoft 365 add-in.
+  Versioning is semantic-style (major.minor.patch, e.g. V7.1.1) with dated
+  hotfix builds (e.g. 7.1.1.2). Older release notes (6.7.19 and older) live in
+  a separate archive article. This artifact records the recent window; the live
+  release-notes article is the source of truth.
+docs: https://support.upslide.net/hc/en-us/articles/201973503-Release-notes
+archive: https://support.upslide.net/hc/en-us/articles/7752737769756-Older-release-notes-6-7-19-and-older
+versioning:
+  scheme: semantic (major.minor.patch) with dated hotfix builds
+  current: 7.1.1
+entries:
+  - version: 7.1.1
+    date: '2026-07-10'
+    latest: true
+    highlights:
+      - Corner Radius controls in Formatting Tools (precise radius, per-presentation default, copy across shapes)
+      - Excel text links restored inside footnotes and endnotes, preserved on hide/unhide/refresh
+      - Data Pack generation no longer stops on failing links; failures highlighted with explanation, source workbook skipped after 10 consecutive failures
+      - Smart Track shows selected cell for VLOOKUP/HLOOKUP/XLOOKUP formulas
+      - Libraries with write access proposed for indexation (for MCP and natural-language search)
+      - SharePoint configuration with Graph API (feature flag sharepoint-selected-sites)
+      - Power BI Link supports grouped visuals
+    hotfixes:
+      - build: 7.1.1.2
+        date: '2026-06-29'
+        notes: 'Beta fixes: Go to Excel source with multiple links selected; background presentations no longer opened read-only (Office crash workaround)'
+      - build: 7.1.1.3
+        date: '2026-07-02'
+        notes: 'Beta: UpSlide Web add-in features included in the Office Desktop ribbon when both installed'
+  - version: 7.1.0
+    date: '2026-06-24'
+    highlights:
+      - 'MCP Server (Beta): selected UpSlide features accessible via Claude in PowerPoint and Excel'
+      - 'AI Slide Generator accessible via the MCP (Beta)'
+    hotfixes:
+      - build: 7.1.0.1
+        date: '2026-06-09'
+        notes: 'Beta Slide Generator fixes: text shape max character counts; paragraph style application'
+      - build: 7.1.0.2
+        date: '2026-06-09'
+        notes: Additional beta fixes

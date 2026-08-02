@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  UpSlide help center "Architecture and security" section
+  (support.upslide.net) — Communication details, UpSlide MCP, AI Security &
+  Data Privacy, Security of UpSlide endpoints. UpSlide publishes no public
+  REST API or OpenAPI, so spec-derived assertions are not applicable; entries
+  reflect documented compliance and protocol claims only.
+standards:
+  - id: mcp
+    conforms: true
+    evidence: >-
+      Official hosted Model Context Protocol server at
+      https://api.upslide.com/mcp (Streamable HTTP), documented for Claude
+      Desktop and M365 Copilot connectors (support article "Connect Claude to
+      UpSlide").
+  - id: soc2
+    conforms: true
+    evidence: >-
+      "SOC 2 Type II certified", independently audited; full report shared
+      with clients on request (upslide.com/upslide-security/, retrieved
+      2026-07-21; also "Security of UpSlide endpoints" support article).
+  - id: iso27001
+    conforms: true
+    evidence: >-
+      "UpSlide is fully certified" against ISO 27001
+      (upslide.com/upslide-security/, retrieved 2026-07-21). The older help
+      center article "AI Security & Data Privacy" (2026-05-27) still said
+      "coming soon".
+  - id: tls
+    conforms: true
+    evidence: >-
+      All client-server communications over HTTPS/TLS 1.2, with AES-256
+      encryption on auto-update and AI channels (Communication details,
+      Auto-update process and security).
+  - id: oidc
+    conforms: false
+    evidence: >-
+      No /.well-known/openid-configuration on upslide.com or
+      portal.upslide.net (probed 2026-07-21, 404). Connector auth is delegated
+      to Microsoft Entra ID applications rather than a first-party OIDC issuer.
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      No first-party OAuth 2.0 authorization server published; MCP connector
+      access is mapped via Microsoft Entra ID admin consent.
