@@ -41,6 +41,16 @@ tags:
 - Company
 - Applicative Saas
 - Document Automation
+- Financial-Services
+- Microsoft-365
+- PowerPoint
+- Excel
+- AI Assistants
+- MCP
+tags_raw:
+- Company
+- Applicative Saas
+- Document Automation
 - Financial Services
 - Microsoft 365
 - PowerPoint
@@ -60,6 +70,10 @@ apis:
   humanURL: https://support.upslide.net/hc/en-us/articles/27412396550812-UpSlide-MCP
   baseURL: https://api.upslide.com/mcp
   tags:
+  - MCP
+  - Agents
+  - Microsoft-365
+  tags_raw:
   - MCP
   - Agents
   - Microsoft 365
