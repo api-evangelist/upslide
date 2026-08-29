@@ -11,6 +11,17 @@ description: >-
   Skills that connect Claude and Microsoft 365 Copilot to the add-in. UpSlide
   is SOC 2 Type II and ISO 27001 certified, and is backed by Partech.
 url: https://raw.githubusercontent.com/api-evangelist/upslide/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
