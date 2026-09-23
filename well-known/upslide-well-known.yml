@@ -1,41 +1,64 @@
-generated: '2026-07-21'
+generated: '2026-09-19'
 method: searched
-description: >-
-  Probe of the /.well-known/ discovery surface across UpSlide's public hosts
-  (upslide.com website, upslide.net legacy/redirect domain, portal.upslide.net
-  customer portal, and the api.upslide.com / api.upslide.net service hosts).
-  No well-known documents are published; every probed path returned 404.
-  Recorded statuses are the honest result of the probe.
+description: Probe of the /.well-known/ discovery surface across UpSlide's public hosts (upslide.com website,
+  upslide.net legacy/redirect domain, portal.upslide.net customer portal, and the api.upslide.com / api.upslide.net
+  service hosts). No well-known documents are published; every probed path returned 404. Recorded statuses
+  are the honest result of the probe.
 hosts:
-  - host: https://upslide.com
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-      - path: /.well-known/openid-configuration
-        status: 404
-      - path: /.well-known/oauth-authorization-server
-        status: 404
-      - path: /.well-known/api-catalog
-        status: 404
-      - path: /.well-known/ai-plugin.json
-        status: 404
-  - host: https://www.upslide.net
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-  - host: https://portal.upslide.net
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-      - path: /.well-known/openid-configuration
-        status: 404
+- host: https://upslide.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://www.upslide.net
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://portal.upslide.net
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://api.upslide.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: upslide-api-oauth-protected-resource.json
+    bytes: 136
+  - path: /.well-known/oauth-authorization-server/mcp
+    status: 200
+    file: upslide-api-oauth-authorization-server.json
+    bytes: 552
+  path_echo_control: passed
+- host: https://api.upslide.net
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+x-mcp-probe:
+  probed: '2026-09-19'
+  issue: roadmap#321, roadmap#337
+  documents:
   - host: https://api.upslide.com
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-      - path: /.well-known/oauth-protected-resource
-        status: 404
-  - host: https://api.upslide.net
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
+    path: /.well-known/oauth-protected-resource
+    file: upslide-api-oauth-protected-resource.json
+  - host: https://api.upslide.com
+    path: /.well-known/oauth-authorization-server/mcp
+    file: upslide-api-oauth-authorization-server.json
+  validated_on: resource (RFC 9728) / issuer (RFC 8414, OIDC)
+  negative_control: one per host; a 2xx JSON object at an impossible path discards the host
+note: 'MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s
+  primary hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed
+  and were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'
