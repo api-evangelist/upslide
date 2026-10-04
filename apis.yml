@@ -52,8 +52,8 @@ tags:
 - Company
 - Applicative Saas
 - Document Automation
-- Financial-Services
-- Microsoft-365
+- Financial Services
+- Microsoft 365
 - PowerPoint
 - Excel
 - AI Assistant
@@ -68,6 +68,8 @@ tags_raw:
 - Excel
 - AI Assistants
 - MCP
+- Financial-Services
+- Microsoft-365
 apis:
 - name: UpSlide MCP Server
   description: >-
@@ -83,11 +85,12 @@ apis:
   tags:
   - MCP
   - Agents
-  - Microsoft-365
+  - Microsoft 365
   tags_raw:
   - MCP
   - Agents
   - Microsoft 365
+  - Microsoft-365
   properties:
   - type: MCPServer
     url: mcp/upslide-mcp.yml
